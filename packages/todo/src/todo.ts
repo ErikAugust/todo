@@ -6,9 +6,8 @@ import * as os from 'os';
 // Check for .env configuration file:
 config();
 
-export const PATH: string = process.env.TODO_PATH || 
-`${os.homedir()}/todo.json` || 
-`${process.cwd()}/todo.json`;
+// Checks for environment variable, falls back to home directory:
+export const PATH: string = process.env.TODO_PATH || `${os.homedir()}/todo.json`;
 
 interface TodoConfig {
   created?: string;
