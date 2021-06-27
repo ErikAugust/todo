@@ -28,30 +28,9 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`todo hello [FILE]`](#todo-hello-file)
 * [`todo help [COMMAND]`](#todo-help-command)
 * [`todo list [CATEGORY]`](#todo-list-category)
 * [`todo start`](#todo-start)
-
-## `todo hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ todo hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ todo hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/hello.ts)_
 
 ## `todo help [COMMAND]`
 
