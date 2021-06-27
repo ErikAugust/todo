@@ -30,7 +30,8 @@ USAGE
 <!-- commands -->
 * [`todo hello [FILE]`](#todo-hello-file)
 * [`todo help [COMMAND]`](#todo-help-command)
-* [`todo list [FILE]`](#todo-list-file)
+* [`todo list [CATEGORY]`](#todo-list-category)
+* [`todo start`](#todo-start)
 
 ## `todo hello [FILE]`
 
@@ -69,19 +70,28 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
-## `todo list [FILE]`
+## `todo list [CATEGORY]`
 
-describe the command here
+view list of todo items
 
 ```
 USAGE
-  $ todo list [FILE]
+  $ todo list [CATEGORY]
 
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+ARGUMENTS
+  CATEGORY  list by category of items
 ```
 
 _See code: [src/commands/list.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/list.ts)_
+
+## `todo start`
+
+start a new todo list
+
+```
+USAGE
+  $ todo start
+```
+
+_See code: [src/commands/start.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/start.ts)_
 <!-- commandsstop -->

@@ -27,7 +27,7 @@ export default class List extends Command {
       // If no items:
       if (!items.length) {
         await displayAsciiArt('Todo');
-        this.log(`There are no items for ${chalk.green.bold(category)}.\n`);
+        this.log(!category ? `There are no items.` : `There are no items for ${chalk.green.bold(category)}.\n`);
         process.exit(0);
       }
       
