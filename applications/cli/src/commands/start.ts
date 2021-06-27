@@ -19,7 +19,7 @@ export default class Start extends Command {
       this.log(`Lists already exist at ${newFile}! Stopping.`);
     } else {
       await createNewListFiles(newFile);
-      this.log(`New todo lists created at ${newFile}! New .env file created.`);
+      this.log(`New todo lists created at ${newFile}! New .env file also created.`);
     }
   }
 }
