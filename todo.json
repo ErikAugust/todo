@@ -1,6 +1,18 @@
 {
     "list": [
         {
+            "uuid": "19c8e2c1-ccf2-4854-aa20-93895cf1cf4e",
+            "title": "Move to key-based authentication with GitHub",
+            "category": "someday-maybe",
+            "createdAt": "2020-12-19T17:23:20.144Z",
+            "updatedAt": "2020-12-19T17:23:20.144Z",
+            "notes": [
+              "https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/"
+            ],
+            "completed": false,
+            "dueDate": "2021-04-01T04:00:00.000Z"
+        },
+        {
             "uuid": "d053dda9-331b-4298-83d9-9f92fb6f4ec9",
             "title": "Download and remove unused S3 buckets",
             "category": "someday-maybe",

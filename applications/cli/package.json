@@ -1,0 +1,60 @@
+{
+  "name": "@eaj/todo-cli",
+  "description": "CLI for Todo",
+  "version": "0.0.0",
+  "author": "Erik August Johnson @ErikAugust",
+  "bin": {
+    "todo": "./bin/run"
+  },
+  "bugs": "https://github.com/ErikAugust/todo/issues",
+  "dependencies": {
+    "@eaj/todo": "*",
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "chalk": "^4.1.1",
+    "cli-table": "^0.3.6",
+    "figlet": "^1.5.0",
+    "inquirer": "^8.1.1",
+    "moment": "^2.29.1",
+    "terminal-kit": "1.44.0",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@types/node": "^10",
+    "globby": "^10",
+    "ts-node": "^8",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/ErikAugust/todo",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "todo",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "ErikAugust/todo",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
