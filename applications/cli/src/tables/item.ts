@@ -31,9 +31,9 @@ const terminal = require('terminal-kit').terminal;
       {
         hasBorder: true,
         contentHasMarkup: true,
-        borderAttr: { color: 'blue' },
+        borderAttr: { color: 'green' },
         textAttr: { bgColor: 'default' },
-        firstColumnTextAttr: { color: 'blue' },
+        firstColumnTextAttr: { color: 'green' },
         width: 60,
         fit: true
       }

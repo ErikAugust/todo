@@ -28,9 +28,26 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`todo add`](#todo-add)
 * [`todo help [COMMAND]`](#todo-help-command)
 * [`todo list [CATEGORY]`](#todo-list-category)
 * [`todo start`](#todo-start)
+
+## `todo add`
+
+add a new todo list item
+
+```
+USAGE
+  $ todo add
+
+OPTIONS
+  -c, --category=category  [default: inbox] category where item will be added
+  -d, --dueDate=dueDate    due date of item (example: "2020-09-30")
+  -u, --url=url            hyperlink relating to item (example: "https://google.com")
+```
+
+_See code: [src/commands/add.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/add.ts)_
 
 ## `todo help [COMMAND]`
 

@@ -1,12 +1,14 @@
 import {Item} from '@eaj/todo';
 import {Moment} from 'moment';
+import moment from 'moment';
 import chalk from 'chalk';
 import * as inquirer from 'inquirer';
 
 function getDueDateLabel(dueDate: Moment): string {
     // TODO: Switch color - red - yellow - based on the due date in past/future
     // https://momentjs.com/docs/#/displaying/difference/
-    return `(${chalk.bold.red(dueDate.fromNow())})`;
+
+    return `(${chalk.bold.red(dueDate.endOf('day').calendar())})`;
   }
 
 export async function itemFromListPrompt(items: Array<Item>): Promise<number> {
