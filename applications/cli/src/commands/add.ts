@@ -14,11 +14,6 @@ export default class Add extends Command {
       multiple: false,
       description: 'category where item will be added'
     }),
-    dueDate: flags.string({
-      char: 'd',
-      multiple: false,
-      description: 'due date of item (example: "2020-09-30")'
-    }),
     url: flags.string({
       char: 'u',
       multiple: false,
@@ -28,12 +23,13 @@ export default class Add extends Command {
 
   async run() {
     const {flags} = this.parse(Add);
-    const { title, intention, action } = await newItemPrompt();
+    const { title, intention, action, dueDate } = await newItemPrompt();
 
     const todo = new Todo();
     const item = new Item({
       title,
       intention,
+      dueDate,
       ...flags
     })
     if (action) {
@@ -43,7 +39,7 @@ export default class Add extends Command {
     }
     todo.list.push(item);
     todo.save();
-    
+
     await displayAsciiArt('Todo');
     this.log(`${chalk.bold.green(title)} has been added to list.`);
     

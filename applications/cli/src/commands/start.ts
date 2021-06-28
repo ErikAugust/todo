@@ -9,7 +9,7 @@ export default class Start extends Command {
   async run() {
     const {args} = this.parse(Start);
 
-    await displayAsciiArt('Todo');
+    await displayAsciiArt('todo');
     this.log('Creating a new todo list...');
 
     // Prompt user for a new file path:
@@ -17,6 +17,7 @@ export default class Start extends Command {
 
     if (checkIfFileExists(newFile)) {
       this.log(`Lists already exist at ${newFile}! Stopping.`);
+      process.exit(0);
     } else {
       await createNewListFiles(newFile);
       this.log(`New todo lists created at ${newFile}! New .env file also created.`);

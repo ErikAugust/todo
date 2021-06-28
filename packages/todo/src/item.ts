@@ -14,6 +14,7 @@ export interface DeserializedItem {
   notes?: Array<string>;
   completed?: boolean;
   dueDate?: string;
+  action?: boolean;
 }
 
 /**
@@ -32,6 +33,7 @@ export default class Item {
   notes?: Array<string>;
   completed: boolean;
   dueDate?: Moment;
+  action?: boolean;
 
   constructor(item: DeserializedItem) {
     this.uuid = item.uuid || uuid();
@@ -45,6 +47,7 @@ export default class Item {
     this.notes = item.notes || undefined;
     this.completed = item.completed || false;
     this.dueDate = item.dueDate ? this.getMoment(item.dueDate) : undefined;
+    this.action = item.action || false;
   }
 
   /**
@@ -56,6 +59,7 @@ export default class Item {
     if (!this.actions) {
       this.actions = [];
     }
+    item.action = true;
     this.actions.push(item);
   }
 

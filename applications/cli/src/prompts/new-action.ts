@@ -2,12 +2,12 @@ import * as inquirer from 'inquirer';
 
 inquirer.registerPrompt('date', require('inquirer-date-prompt'));
 
-export function newItemPrompt() {
+export function newActionPrompt() {
     const questions = [
       {
         name: 'title',
         type: 'input',
-        message: 'Enter title of item:',
+        message: 'Enter title of action:',
         validate: function( value: any ) {
           if (value.length) {
             return true;
@@ -27,11 +27,6 @@ export function newItemPrompt() {
             return 'Please enter the intention of the item.';
           }
         }
-      },
-      {
-        name: 'action',
-        type: 'input',
-        message: 'Enter the next action to be taken:',
       },
       {
         name: 'dueDate',

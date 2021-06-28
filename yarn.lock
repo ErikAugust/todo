@@ -3828,6 +3828,11 @@ init-package-json@^2.0.2:
     validate-npm-package-license "^3.0.4"
     validate-npm-package-name "^3.0.0"
 
+inquirer-date-prompt@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/inquirer-date-prompt/-/inquirer-date-prompt-2.0.1.tgz#38dc7dbc19774513fd32a47fe8958ea5a9d67eb6"
+  integrity sha512-1Rp9h8FJnORK6J+76jBbN4cULueGrI3vzY1yvH8M2dJ6cYm2/6ZNkOB3O7uf4LeiZUEZK14UTORrwxNGb9y/CA==
+
 inquirer@^7.3.3:
   version "7.3.3"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-7.3.3.tgz#04d176b2af04afc157a83fd7c100e98ee0aad003"

@@ -28,10 +28,28 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`todo action [FILE]`](#todo-action-file)
 * [`todo add`](#todo-add)
+* [`todo complete [SHORTCODE]`](#todo-complete-shortcode)
 * [`todo help [COMMAND]`](#todo-help-command)
 * [`todo list [CATEGORY]`](#todo-list-category)
 * [`todo start`](#todo-start)
+
+## `todo action [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ todo action [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/action.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/action.ts)_
 
 ## `todo add`
 
@@ -43,11 +61,24 @@ USAGE
 
 OPTIONS
   -c, --category=category  [default: inbox] category where item will be added
-  -d, --dueDate=dueDate    due date of item (example: "2020-09-30")
   -u, --url=url            hyperlink relating to item (example: "https://google.com")
 ```
 
 _See code: [src/commands/add.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/add.ts)_
+
+## `todo complete [SHORTCODE]`
+
+mark item or action as complete
+
+```
+USAGE
+  $ todo complete [SHORTCODE]
+
+ARGUMENTS
+  SHORTCODE  shortcode of item or action to complete
+```
+
+_See code: [src/commands/complete.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/complete.ts)_
 
 ## `todo help [COMMAND]`
 
