@@ -28,25 +28,24 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`todo action [FILE]`](#todo-action-file)
+* [`todo action SHORTCODE`](#todo-action-shortcode)
 * [`todo add`](#todo-add)
 * [`todo complete [SHORTCODE]`](#todo-complete-shortcode)
 * [`todo help [COMMAND]`](#todo-help-command)
 * [`todo list [CATEGORY]`](#todo-list-category)
 * [`todo start`](#todo-start)
+* [`todo view SHORTCODE`](#todo-view-shortcode)
 
-## `todo action [FILE]`
+## `todo action SHORTCODE`
 
-describe the command here
+adds action to given item
 
 ```
 USAGE
-  $ todo action [FILE]
+  $ todo action SHORTCODE
 
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+ARGUMENTS
+  SHORTCODE  shortcode of item to add action
 ```
 
 _See code: [src/commands/action.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/action.ts)_
@@ -121,4 +120,18 @@ USAGE
 ```
 
 _See code: [src/commands/start.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/start.ts)_
+
+## `todo view SHORTCODE`
+
+view information for an item or action
+
+```
+USAGE
+  $ todo view SHORTCODE
+
+ARGUMENTS
+  SHORTCODE  shortcode of item or action to view
+```
+
+_See code: [src/commands/view.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/view.ts)_
 <!-- commandsstop -->
