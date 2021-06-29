@@ -34,6 +34,7 @@ USAGE
 * [`todo help [COMMAND]`](#todo-help-command)
 * [`todo list [CATEGORY]`](#todo-list-category)
 * [`todo start`](#todo-start)
+* [`todo trash [FILE]`](#todo-trash-file)
 * [`todo view SHORTCODE`](#todo-view-shortcode)
 
 ## `todo action SHORTCODE`
@@ -120,6 +121,22 @@ USAGE
 ```
 
 _See code: [src/commands/start.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/start.ts)_
+
+## `todo trash [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ todo trash [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/trash.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/trash.ts)_
 
 ## `todo view SHORTCODE`
 

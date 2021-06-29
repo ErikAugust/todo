@@ -32,7 +32,8 @@ export function newActionPrompt() {
         name: 'dueDate',
         type: 'date',
         message: 'Enter a due date for the item:',
-        locale: 'en-US'
+        locale: 'en-US',
+        clearable: true,
       }
     ];
     return inquirer.prompt(questions);

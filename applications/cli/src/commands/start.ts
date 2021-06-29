@@ -9,7 +9,7 @@ export default class Start extends Command {
   async run() {
     const {args} = this.parse(Start);
 
-    await displayAsciiArt('todo');
+    await displayAsciiArt('Todo');
     this.log('Creating a new todo list...');
 
     // Prompt user for a new file path:
