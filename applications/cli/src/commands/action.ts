@@ -31,6 +31,9 @@ export default class Action extends Command {
       const action = await newActionPrompt();
       item.addAction(action);
       todo.save();
+      await displayAsciiArt('Todo');
+      this.log(`${chalk.green.bold(action.title)} has been created.`);
+
     }
   }
 }

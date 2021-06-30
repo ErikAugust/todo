@@ -34,7 +34,7 @@ export default class Add extends Command {
     })
     if (action) {
       item.actions = [
-        new Item({ title: action })
+        new Item({ title: action, action: true })
       ];
     }
     todo.list.push(item);

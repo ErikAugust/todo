@@ -31,10 +31,11 @@ USAGE
 * [`todo action SHORTCODE`](#todo-action-shortcode)
 * [`todo add`](#todo-add)
 * [`todo complete [SHORTCODE]`](#todo-complete-shortcode)
+* [`todo empty [FILE]`](#todo-empty-file)
 * [`todo help [COMMAND]`](#todo-help-command)
 * [`todo list [CATEGORY]`](#todo-list-category)
 * [`todo start`](#todo-start)
-* [`todo trash [FILE]`](#todo-trash-file)
+* [`todo trash [CATEGORY]`](#todo-trash-category)
 * [`todo view SHORTCODE`](#todo-view-shortcode)
 
 ## `todo action SHORTCODE`
@@ -80,6 +81,22 @@ ARGUMENTS
 
 _See code: [src/commands/complete.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/complete.ts)_
 
+## `todo empty [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ todo empty [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/empty.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/empty.ts)_
+
 ## `todo help [COMMAND]`
 
 display help for todo
@@ -122,18 +139,16 @@ USAGE
 
 _See code: [src/commands/start.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/start.ts)_
 
-## `todo trash [FILE]`
+## `todo trash [CATEGORY]`
 
-describe the command here
+move selected items to trash
 
 ```
 USAGE
-  $ todo trash [FILE]
+  $ todo trash [CATEGORY]
 
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+ARGUMENTS
+  CATEGORY  list by category of items
 ```
 
 _See code: [src/commands/trash.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/trash.ts)_
