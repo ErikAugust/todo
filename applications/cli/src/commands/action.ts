@@ -1,5 +1,5 @@
 import {Command} from '@oclif/command';
-import {Todo} from '@eaj/todo';
+import {Todo, Item} from '@eaj/todo';
 import chalk from 'chalk';
 import {displayAsciiArt} from '../misc/ascii';
 import { newActionPrompt } from '../prompts/new-action';
@@ -29,7 +29,8 @@ export default class Action extends Command {
         process.exit(0);
       }
       const action = await newActionPrompt();
-      item.addAction(action);
+      action.action = true;
+      item.addAction(new Item(action));
       todo.save();
       await displayAsciiArt('Todo');
       this.log(`${chalk.green.bold(action.title)} has been created.`);
