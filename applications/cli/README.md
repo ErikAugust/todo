@@ -29,6 +29,7 @@ USAGE
 # Commands
 <!-- commands -->
 * [`todo action SHORTCODE`](#todo-action-shortcode)
+* [`todo active`](#todo-active)
 * [`todo add`](#todo-add)
 * [`todo complete [SHORTCODE]`](#todo-complete-shortcode)
 * [`todo empty`](#todo-empty)
@@ -53,6 +54,17 @@ ARGUMENTS
 ```
 
 _See code: [src/commands/action.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/action.ts)_
+
+## `todo active`
+
+sets archived items to active
+
+```
+USAGE
+  $ todo active
+```
+
+_See code: [src/commands/active.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/active.ts)_
 
 ## `todo add`
 
