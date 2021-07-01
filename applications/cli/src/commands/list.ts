@@ -1,4 +1,4 @@
-import {Command} from '@oclif/command';
+import {Command, flags} from '@oclif/command';
 import {getItemsByCategory, sortByDueDate, Todo} from '@eaj/todo';
 import chalk from 'chalk';
 import {displayAsciiArt} from '../misc/ascii';
@@ -7,7 +7,14 @@ import {getItemTable} from '../tables/item';
 
 export default class List extends Command {
   static description = 'view list of todo items';
-  static flags = {};
+  static flags = {
+    list: flags.string({
+      char: 'l',
+      default: 'list',
+      multiple: false,
+      description: 'list to be shown'
+    })
+  };
   static args = [
     {
       name: 'category',
@@ -17,10 +24,10 @@ export default class List extends Command {
 
   async run() {
     try {
-      const {args} = this.parse(List);
+      const {args,flags} = this.parse(List);
       const category = args.category?.toLowerCase();
       const todo = new Todo();
-      const list = todo.list;
+      const list = getList(flags.list, todo);
   
       let items = category ? getItemsByCategory(list, category) : list;
       
@@ -42,5 +49,15 @@ export default class List extends Command {
       this.log('An error has occurred:');
       console.error(error);
     }
+  }
+}
+
+function getList(list: string, todo: Todo) {
+  if (list === 'archive') {
+    return todo.archive;
+  } else if (list === 'trash') {
+    return todo.trash;
+  } else {
+    return todo.list;
   }
 }
