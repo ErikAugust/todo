@@ -55,10 +55,11 @@ export default class Todo {
   /**
    * Finds an item via shortcode - can be a deeply nested action
    * @param {string} shortUuid 
+   * @param {string} list
    */
-  public findItem(shortUuid: string): Item | undefined {
+  public findItem(shortUuid: string, list: string = 'list'): Item | undefined {
     if (this.listHasItem(shortUuid)) {
-      for (const item of this.list) {
+      for (const item of this[list]) {
         // Base case:
         const condition = item.uuid.slice(0, 6) === shortUuid;
         if (condition) {
