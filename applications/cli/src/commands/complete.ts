@@ -22,7 +22,6 @@ export default class Complete extends Command {
     // Find and complete item/action by shortcode:
     if (shortcode) {
       const item = todo.findItem(shortcode);
-
       if (item) {
         // Item is an action, just set to complete:
         if (item.action) {

@@ -6,6 +6,7 @@ import {Todo, Item} from '@eaj/todo';
 
 export default class Add extends Command {
   static description = 'add a new todo list item';
+  static aliases = ['new'];
 
   static flags = {
     category: flags.string({
