@@ -21,20 +21,21 @@ export default class Action extends Command {
     const shortcode = args.shortcode;
     const todo = new Todo();
 
-    if (shortcode) {
-      const item = todo.findItem(shortcode);
-      if (!item) {
-        await displayAsciiArt('Todo');
-        this.log(`No item found for ${chalk.green.bold(shortcode)}.\n`);
-        process.exit(0);
-      }
-      const action = await newActionPrompt();
-      action.action = true;
-      item.addAction(new Item(action));
-      todo.save();
+    // Find item by shortcode:
+    const item = todo.findItem(shortcode);
+    
+    // No item found by shortcode:
+    if (!item) {
       await displayAsciiArt('Todo');
-      this.log(`${chalk.green.bold(action.title)} has been created.`);
-
+      this.log(`No item found for ${chalk.green.bold(shortcode)}.\n`);
+      process.exit(0);
     }
+    const action = await newActionPrompt();
+    action.action = true;
+    const actionItem = new Item(action);
+    item.addAction(actionItem);
+    todo.save();
+    await displayAsciiArt('Todo');
+    this.log(`\n${chalk.green.bold(actionItem.title)} [${actionItem.getUuidShortcode()}] has been created.\n`);
   }
 }

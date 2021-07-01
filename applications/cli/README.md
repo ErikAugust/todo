@@ -31,9 +31,10 @@ USAGE
 * [`todo action SHORTCODE`](#todo-action-shortcode)
 * [`todo add`](#todo-add)
 * [`todo complete [SHORTCODE]`](#todo-complete-shortcode)
-* [`todo empty [FILE]`](#todo-empty-file)
+* [`todo empty`](#todo-empty)
 * [`todo help [COMMAND]`](#todo-help-command)
 * [`todo list [CATEGORY]`](#todo-list-category)
+* [`todo note SHORTCODE`](#todo-note-shortcode)
 * [`todo start`](#todo-start)
 * [`todo trash [CATEGORY]`](#todo-trash-category)
 * [`todo view SHORTCODE`](#todo-view-shortcode)
@@ -63,6 +64,9 @@ USAGE
 OPTIONS
   -c, --category=category  [default: inbox] category where item will be added
   -u, --url=url            hyperlink relating to item (example: "https://google.com")
+
+ALIASES
+  $ todo new
 ```
 
 _See code: [src/commands/add.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/add.ts)_
@@ -81,18 +85,13 @@ ARGUMENTS
 
 _See code: [src/commands/complete.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/complete.ts)_
 
-## `todo empty [FILE]`
+## `todo empty`
 
-describe the command here
+empties the trash bin
 
 ```
 USAGE
-  $ todo empty [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ todo empty
 ```
 
 _See code: [src/commands/empty.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/empty.ts)_
@@ -127,6 +126,20 @@ ARGUMENTS
 ```
 
 _See code: [src/commands/list.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/list.ts)_
+
+## `todo note SHORTCODE`
+
+add a note to the specified item or action
+
+```
+USAGE
+  $ todo note SHORTCODE
+
+ARGUMENTS
+  SHORTCODE  shortcode of item to add action
+```
+
+_See code: [src/commands/note.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/note.ts)_
 
 ## `todo start`
 
