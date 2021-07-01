@@ -1,23 +1,28 @@
 import {Command} from '@oclif/command';
-import {Todo, Item} from '@eaj/todo';
-import chalk from 'chalk';
+import {Todo} from '@eaj/todo';
 import {displayAsciiArt} from '../misc/ascii';
-import { newActionPrompt } from '../prompts/new-action';
+import chalk from 'chalk';
 
-export default class Action extends Command {
-  static description = 'adds action to given item';
+export default class Url extends Command {
+  static description = 'add a url to item or action'
 
   static args = [
     {
       name: 'shortcode',
-      description: 'shortcode of item to add action',
+      description: 'shortcode of item to add url',
+      required: true
+    },
+    {
+      name: 'url',
+      description: 'url to set as item url',
       required: true
     }
   ];
 
   async run() {
-    const {args} = this.parse(Action);
+    const {args} = this.parse(Url);
     const shortcode = args.shortcode;
+    const url = args.url;
     const todo = new Todo();
 
     // Find item by shortcode:
@@ -29,14 +34,12 @@ export default class Action extends Command {
       this.log(`No item found for ${chalk.green.bold(shortcode)}.\n`);
       process.exit(0);
     }
-    const action = await newActionPrompt();
-    action.action = true;
-    const actionItem = new Item(action);
-    item.addAction(actionItem);
+    item.url = url;
     todo.save();
+
     await displayAsciiArt('Todo');
     this.log(
-      `\n${chalk.green.bold(actionItem.title)} [${actionItem.getUuidShortcode()}] has been created.\n`
+      `\nURL added to ${chalk.underline(item.title)} [${chalk.green.bold(item.getUuidShortcode())}].\n`
     );
   }
 }

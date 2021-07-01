@@ -37,6 +37,7 @@ USAGE
 * [`todo note SHORTCODE`](#todo-note-shortcode)
 * [`todo start`](#todo-start)
 * [`todo trash [CATEGORY]`](#todo-trash-category)
+* [`todo url SHORTCODE URL`](#todo-url-shortcode-url)
 * [`todo view SHORTCODE`](#todo-view-shortcode)
 
 ## `todo action SHORTCODE`
@@ -165,6 +166,21 @@ ARGUMENTS
 ```
 
 _See code: [src/commands/trash.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/trash.ts)_
+
+## `todo url SHORTCODE URL`
+
+add a url to item or action
+
+```
+USAGE
+  $ todo url SHORTCODE URL
+
+ARGUMENTS
+  SHORTCODE  shortcode of item to add url
+  URL        url to set as item url
+```
+
+_See code: [src/commands/url.ts](https://github.com/ErikAugust/todo/blob/v0.0.0/src/commands/url.ts)_
 
 ## `todo view SHORTCODE`
 
