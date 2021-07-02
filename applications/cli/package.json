@@ -1,7 +1,7 @@
 {
   "name": "@eaj/todo-cli",
   "description": "CLI for Todo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Erik August Johnson @ErikAugust",
   "bin": {
     "todo": "./bin/run"

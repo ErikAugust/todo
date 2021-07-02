@@ -2,27 +2,23 @@ import {Command} from '@oclif/command';
 import {Todo} from '@eaj/todo';
 import {displayAsciiArt} from '../misc/ascii';
 import chalk from 'chalk';
+import { duePrompt } from '../prompts/due';
 
-export default class Url extends Command {
-  static description = 'add a url to item or action'
+export default class Due extends Command {
+  static description = 'set the due date of an item or action';
 
   static args = [
     {
       name: 'shortcode',
-      description: 'shortcode of item to add url',
-      required: true
-    },
-    {
-      name: 'url',
-      description: 'url to set as item url',
+      description: 'shortcode of item or action to complete',
       required: true
     }
   ];
 
   async run() {
-    const {args} = this.parse(Url);
+    const {args} = this.parse(Due);
+
     const shortcode = args.shortcode;
-    const url = args.url;
     const todo = new Todo();
 
     // Find item by shortcode:
@@ -34,13 +30,14 @@ export default class Url extends Command {
       this.log(`No item found for ${chalk.green.bold(shortcode)}.\n`);
       process.exit(0);
     }
-    
-    item.url = url;
+
+    const { dueDate } = await duePrompt();
+    item.dueDate = dueDate;
     todo.save();
 
     await displayAsciiArt('Todo');
     this.log(
-      `\nURL added to ${chalk.underline(item.title)} [${chalk.green.bold(item.getUuidShortcode())}].\n`
+      `\nDue date added to ${chalk.underline(item.title)} [${chalk.green.bold(item.getUuidShortcode())}].\n`
     );
   }
 }

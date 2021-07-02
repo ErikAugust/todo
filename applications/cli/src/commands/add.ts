@@ -42,7 +42,9 @@ export default class Add extends Command {
     todo.save();
 
     await displayAsciiArt('Todo');
-    this.log(`${chalk.bold.green(title)} has been added to list.`);
+    this.log(
+      `${chalk.bold.green(title)} [${chalk.green.bold(item.getUuidShortcode())}] added to list.`
+    );
     
   }
 }
