@@ -1,14 +1,14 @@
 {
   "name": "@eaj/todo-cli",
   "description": "CLI for Todo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Erik August Johnson @ErikAugust",
   "bin": {
     "todo": "./bin/run"
   },
   "bugs": "https://github.com/ErikAugust/todo/issues",
   "dependencies": {
-    "@eaj/todo": "*",
+    "@eaj/todo": "^1.0.4",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
@@ -53,7 +53,7 @@
   },
   "repository": "ErikAugust/todo",
   "scripts": {
-    "postpack": "rm -f oclif.manifest.json",
+    "postpack": "rm -f oclif.manifest.json tsconfig.tsbuildinfo",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "echo NO TESTS",
     "version": "oclif-dev readme && git add README.md"

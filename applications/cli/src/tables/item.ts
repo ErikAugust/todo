@@ -11,9 +11,10 @@ const terminal = require('terminal-kit').terminal;
     // https://github.com/cronvel/terminal-kit/blob/master/doc/markup.md
     
     const table = [
+      ['id', item.getUuidShortcode() ],
       [ 'title', `^+${item.title}` ],
       [ 'intention', `^/${item.intention || ''}` ],
-      [ 'id', item.getUuidShortcode() ],
+      [ 'category', item.category ],
       [ 'url', item.url ],
       [ 'created at', item.createdAt.format('MMMM Do YYYY [at] h:mm:ss a') ],
       [ 'due date', item.dueDate?.format('MMMM Do YYYY [at] h:mm:ss a') ],

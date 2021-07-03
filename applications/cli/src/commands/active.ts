@@ -1,5 +1,5 @@
 import {Command} from '@oclif/command';
-import {Todo} from '@eaj/todo';
+import { Todo } from '@eaj/todo';
 import {activePrompt} from '../prompts/active';
 import {displayAsciiArt} from '../misc/ascii';
 import chalk from 'chalk';
