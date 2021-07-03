@@ -5,16 +5,8 @@
     "esModuleInterop": true,
     "module": "commonjs",
     "baseUrl": "../..",
-    "paths": {
-      "@eaj/*": [
-        "packages/*/src"
-      ]
-    },
     "outDir": "lib",
-    "rootDirs": [
-      "src",
-      "../../"
-    ],
+    "rootDir": "src",
     "strict": true,
     "target": "es2017"
   },
