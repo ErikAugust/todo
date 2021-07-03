@@ -1,8 +1,8 @@
 {
   "name": "@eaj/todo",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "main": "dist/index",
-  "types": "dist/index",
+  "typings": "dist/index",
   "files": [
     "dist"
   ],
