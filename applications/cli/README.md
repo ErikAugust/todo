@@ -36,6 +36,7 @@ USAGE
 * [`todo due SHORTCODE`](#todo-due-shortcode)
 * [`todo empty`](#todo-empty)
 * [`todo help [COMMAND]`](#todo-help-command)
+* [`todo intention SHORTCODE`](#todo-intention-shortcode)
 * [`todo list [CATEGORY]`](#todo-list-category)
 * [`todo note SHORTCODE`](#todo-note-shortcode)
 * [`todo start`](#todo-start)
@@ -157,6 +158,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `todo intention SHORTCODE`
+
+update the intention of item or action
+
+```
+USAGE
+  $ todo intention SHORTCODE
+
+ARGUMENTS
+  SHORTCODE  shortcode of item to add action
+```
+
+_See code: [src/commands/intention.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/intention.ts)_
 
 ## `todo list [CATEGORY]`
 
