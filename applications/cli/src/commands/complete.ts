@@ -6,6 +6,7 @@ import {completePrompt} from '../prompts/complete';
 
 export default class Complete extends Command {
   static description = 'mark item or action as complete';
+  static aliases = ['done'];
 
   static args = [
     {
