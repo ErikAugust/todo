@@ -113,6 +113,9 @@ USAGE
 
 ARGUMENTS
   SHORTCODE  shortcode of item or action to complete
+
+ALIASES
+  $ todo done
 ```
 
 _See code: [src/commands/complete.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/complete.ts)_
