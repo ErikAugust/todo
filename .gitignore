@@ -3,3 +3,4 @@ node_modules
 results
 *.tsbuildinfo
 .env
+.DS_Store
