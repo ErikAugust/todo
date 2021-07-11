@@ -1,5 +1,4 @@
-@eaj/todo-cli
-=============
+# @eaj/todo-cli
 
 CLI for Todo
 
@@ -8,42 +7,54 @@ CLI for Todo
 [![Downloads/week](https://img.shields.io/npm/dw/@eaj/todo-cli.svg)](https://npmjs.org/package/@eaj/todo-cli)
 [![License](https://img.shields.io/npm/l/@eaj/todo-cli.svg)](https://github.com/ErikAugust/todo/blob/master/package.json)
 
+# Getting Started
+
+Use the `todo start` command to set the path of the JSON file used to store your list. An `.env` file with a variable to the path is created in the working directory.
+
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g @eaj/todo-cli
 $ todo COMMAND
 running command...
 $ todo (-v|--version|version)
-@eaj/todo-cli/1.2.0 darwin-x64 node-v12.18.4
+@eaj/todo-cli/1.3.0 darwin-x64 node-v12.18.4
 $ todo --help [COMMAND]
 USAGE
   $ todo COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`todo action SHORTCODE`](#todo-action-shortcode)
-* [`todo active`](#todo-active)
-* [`todo add`](#todo-add)
-* [`todo category SHORTCODE CATEGORY`](#todo-category-shortcode-category)
-* [`todo complete [SHORTCODE]`](#todo-complete-shortcode)
-* [`todo due SHORTCODE`](#todo-due-shortcode)
-* [`todo empty`](#todo-empty)
-* [`todo help [COMMAND]`](#todo-help-command)
-* [`todo intention SHORTCODE`](#todo-intention-shortcode)
-* [`todo list [CATEGORY]`](#todo-list-category)
-* [`todo note SHORTCODE`](#todo-note-shortcode)
-* [`todo start`](#todo-start)
-* [`todo title SHORTCODE`](#todo-title-shortcode)
-* [`todo trash [CATEGORY]`](#todo-trash-category)
-* [`todo url SHORTCODE URL`](#todo-url-shortcode-url)
-* [`todo view SHORTCODE`](#todo-view-shortcode)
+
+- [`todo action SHORTCODE`](#todo-action-shortcode)
+- [`todo active`](#todo-active)
+- [`todo add`](#todo-add)
+- [`todo category SHORTCODE CATEGORY`](#todo-category-shortcode-category)
+- [`todo complete [SHORTCODE]`](#todo-complete-shortcode)
+- [`todo due SHORTCODE`](#todo-due-shortcode)
+- [`todo empty`](#todo-empty)
+- [`todo help [COMMAND]`](#todo-help-command)
+- [`todo intention SHORTCODE`](#todo-intention-shortcode)
+- [`todo list [CATEGORY]`](#todo-list-category)
+- [`todo note SHORTCODE`](#todo-note-shortcode)
+- [`todo start`](#todo-start)
+- [`todo title SHORTCODE`](#todo-title-shortcode)
+- [`todo trash [CATEGORY]`](#todo-trash-category)
+- [`todo url SHORTCODE URL`](#todo-url-shortcode-url)
+- [`todo view SHORTCODE`](#todo-view-shortcode)
 
 ## `todo action SHORTCODE`
 
@@ -57,7 +68,7 @@ ARGUMENTS
   SHORTCODE  shortcode of item to add action
 ```
 
-_See code: [src/commands/action.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/action.ts)_
+_See code: [src/commands/action.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/action.ts)_
 
 ## `todo active`
 
@@ -68,7 +79,7 @@ USAGE
   $ todo active
 ```
 
-_See code: [src/commands/active.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/active.ts)_
+_See code: [src/commands/active.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/active.ts)_
 
 ## `todo add`
 
@@ -86,7 +97,7 @@ ALIASES
   $ todo new
 ```
 
-_See code: [src/commands/add.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/add.ts)_
 
 ## `todo category SHORTCODE CATEGORY`
 
@@ -101,7 +112,7 @@ ARGUMENTS
   CATEGORY   category of item
 ```
 
-_See code: [src/commands/category.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/category.ts)_
+_See code: [src/commands/category.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/category.ts)_
 
 ## `todo complete [SHORTCODE]`
 
@@ -118,7 +129,7 @@ ALIASES
   $ todo done
 ```
 
-_See code: [src/commands/complete.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/complete.ts)_
+_See code: [src/commands/complete.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/complete.ts)_
 
 ## `todo due SHORTCODE`
 
@@ -132,7 +143,7 @@ ARGUMENTS
   SHORTCODE  shortcode of item or action to complete
 ```
 
-_See code: [src/commands/due.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/due.ts)_
+_See code: [src/commands/due.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/due.ts)_
 
 ## `todo empty`
 
@@ -143,7 +154,7 @@ USAGE
   $ todo empty
 ```
 
-_See code: [src/commands/empty.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/empty.ts)_
+_See code: [src/commands/empty.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/empty.ts)_
 
 ## `todo help [COMMAND]`
 
@@ -174,7 +185,7 @@ ARGUMENTS
   SHORTCODE  shortcode of item to add action
 ```
 
-_See code: [src/commands/intention.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/intention.ts)_
+_See code: [src/commands/intention.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/intention.ts)_
 
 ## `todo list [CATEGORY]`
 
@@ -191,7 +202,7 @@ OPTIONS
   -l, --list=list  [default: list] list to be shown
 ```
 
-_See code: [src/commands/list.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/list.ts)_
+_See code: [src/commands/list.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/list.ts)_
 
 ## `todo note SHORTCODE`
 
@@ -205,7 +216,7 @@ ARGUMENTS
   SHORTCODE  shortcode of item to add action
 ```
 
-_See code: [src/commands/note.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/note.ts)_
+_See code: [src/commands/note.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/note.ts)_
 
 ## `todo start`
 
@@ -216,7 +227,7 @@ USAGE
   $ todo start
 ```
 
-_See code: [src/commands/start.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/start.ts)_
+_See code: [src/commands/start.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/start.ts)_
 
 ## `todo title SHORTCODE`
 
@@ -230,7 +241,7 @@ ARGUMENTS
   SHORTCODE  shortcode of item to add action
 ```
 
-_See code: [src/commands/title.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/title.ts)_
+_See code: [src/commands/title.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/title.ts)_
 
 ## `todo trash [CATEGORY]`
 
@@ -244,7 +255,7 @@ ARGUMENTS
   CATEGORY  list by category of items
 ```
 
-_See code: [src/commands/trash.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/trash.ts)_
+_See code: [src/commands/trash.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/trash.ts)_
 
 ## `todo url SHORTCODE URL`
 
@@ -259,7 +270,7 @@ ARGUMENTS
   URL        url to set as item url
 ```
 
-_See code: [src/commands/url.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/url.ts)_
+_See code: [src/commands/url.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/url.ts)_
 
 ## `todo view SHORTCODE`
 
@@ -273,5 +284,6 @@ ARGUMENTS
   SHORTCODE  shortcode of item or action to view
 ```
 
-_See code: [src/commands/view.ts](https://github.com/ErikAugust/todo/blob/v1.2.0/src/commands/view.ts)_
+_See code: [src/commands/view.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/view.ts)_
+
 <!-- commandsstop -->
