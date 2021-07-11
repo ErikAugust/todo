@@ -9,7 +9,7 @@ CLI for Todo
 
 # Getting Started
 
-Use the `todo start` command to set the path of the JSON file used to store your list. An `.env` file with a variable to the path is created in the working directory.
+Use the `todo start` command to set the path of the JSON file used to store your list. An `.env` file with a `TODO_PATH` variable is created in the working directory.
 
 <!-- toc -->
 
