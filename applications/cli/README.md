@@ -12,15 +12,15 @@ CLI for Todo
 Use the `todo start` command to set the path of the JSON file used to store your list. An `.env` file with a `TODO_PATH` variable is created in the working directory.
 
 <!-- toc -->
-
-- [Usage](#usage)
-- [Commands](#commands)
+* [@eaj/todo-cli](#eajtodo-cli)
+* [Getting Started](#getting-started)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g @eaj/todo-cli
 $ todo COMMAND
@@ -32,29 +32,28 @@ USAGE
   $ todo COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [`todo action SHORTCODE`](#todo-action-shortcode)
-- [`todo active`](#todo-active)
-- [`todo add`](#todo-add)
-- [`todo category SHORTCODE CATEGORY`](#todo-category-shortcode-category)
-- [`todo complete [SHORTCODE]`](#todo-complete-shortcode)
-- [`todo due SHORTCODE`](#todo-due-shortcode)
-- [`todo empty`](#todo-empty)
-- [`todo help [COMMAND]`](#todo-help-command)
-- [`todo intention SHORTCODE`](#todo-intention-shortcode)
-- [`todo list [CATEGORY]`](#todo-list-category)
-- [`todo note SHORTCODE`](#todo-note-shortcode)
-- [`todo start`](#todo-start)
-- [`todo title SHORTCODE`](#todo-title-shortcode)
-- [`todo trash [CATEGORY]`](#todo-trash-category)
-- [`todo url SHORTCODE URL`](#todo-url-shortcode-url)
-- [`todo view SHORTCODE`](#todo-view-shortcode)
+* [`todo action SHORTCODE`](#todo-action-shortcode)
+* [`todo active`](#todo-active)
+* [`todo add`](#todo-add)
+* [`todo category SHORTCODE CATEGORY`](#todo-category-shortcode-category)
+* [`todo complete [SHORTCODE]`](#todo-complete-shortcode)
+* [`todo due SHORTCODE`](#todo-due-shortcode)
+* [`todo empty`](#todo-empty)
+* [`todo help [COMMAND]`](#todo-help-command)
+* [`todo intention SHORTCODE`](#todo-intention-shortcode)
+* [`todo list [CATEGORY]`](#todo-list-category)
+* [`todo note SHORTCODE`](#todo-note-shortcode)
+* [`todo start`](#todo-start)
+* [`todo title SHORTCODE`](#todo-title-shortcode)
+* [`todo trash [CATEGORY]`](#todo-trash-category)
+* [`todo trash-archive`](#todo-trash-archive)
+* [`todo url SHORTCODE URL`](#todo-url-shortcode-url)
+* [`todo view SHORTCODE`](#todo-view-shortcode)
 
 ## `todo action SHORTCODE`
 
@@ -257,6 +256,17 @@ ARGUMENTS
 
 _See code: [src/commands/trash.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/trash.ts)_
 
+## `todo trash-archive`
+
+moved archived items into trash bin
+
+```
+USAGE
+  $ todo trash-archive
+```
+
+_See code: [src/commands/trash-archive.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/trash-archive.ts)_
+
 ## `todo url SHORTCODE URL`
 
 add a url to item or action
@@ -285,5 +295,4 @@ ARGUMENTS
 ```
 
 _See code: [src/commands/view.ts](https://github.com/ErikAugust/todo/blob/v1.3.0/src/commands/view.ts)_
-
 <!-- commandsstop -->
