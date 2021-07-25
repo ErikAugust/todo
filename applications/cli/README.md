@@ -7,20 +7,32 @@ CLI for Todo
 [![Downloads/week](https://img.shields.io/npm/dw/@eaj/todo-cli.svg)](https://npmjs.org/package/@eaj/todo-cli)
 [![License](https://img.shields.io/npm/l/@eaj/todo-cli.svg)](https://github.com/ErikAugust/todo/blob/master/package.json)
 
+# Introduction
+
+Todo is a productivity (to-do list) system that draws its design loosely from the principles of [Getting Things Done (GTD)](https://gettingthingsdone.com/what-is-gtd/) by David Allen. It is built first and foremost to help you get things out of your head so that you can be relaxed and present. To help you to enjoy productivity, how about that?
+
+> There has been a missing piece in our culture of knowledge work: a system with a coherent set of behaviors and tools that functions effectively at the level at which work really happens. It must incorporate the results of big-picture thinking as well as the smallest of open details. It must manage multiple tiers of priorities. It must maintain control over hundreds of new inputs daily. It must save a lot more time and effort than are needed to maintain it. It must make it easier to get things done.
+>
+> -- <cite>David Allen</cite>
+
 # Getting Started
+
+Todo saves your data to a single JSON file.
 
 Use the `todo start` command to set the path of the JSON file used to store your list. An `.env` file with a `TODO_PATH` variable is created in the working directory.
 
 <!-- toc -->
-* [@eaj/todo-cli](#eajtodo-cli)
-* [Getting Started](#getting-started)
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [@eaj/todo-cli](#eajtodo-cli)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
+
 ```sh-session
 $ npm install -g @eaj/todo-cli
 $ todo COMMAND
@@ -32,28 +44,30 @@ USAGE
   $ todo COMMAND
 ...
 ```
+
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-* [`todo action SHORTCODE`](#todo-action-shortcode)
-* [`todo active`](#todo-active)
-* [`todo add`](#todo-add)
-* [`todo category SHORTCODE CATEGORY`](#todo-category-shortcode-category)
-* [`todo complete [SHORTCODE]`](#todo-complete-shortcode)
-* [`todo due SHORTCODE`](#todo-due-shortcode)
-* [`todo empty`](#todo-empty)
-* [`todo help [COMMAND]`](#todo-help-command)
-* [`todo intention SHORTCODE`](#todo-intention-shortcode)
-* [`todo list [CATEGORY]`](#todo-list-category)
-* [`todo note SHORTCODE`](#todo-note-shortcode)
-* [`todo start`](#todo-start)
-* [`todo title SHORTCODE`](#todo-title-shortcode)
-* [`todo trash [CATEGORY]`](#todo-trash-category)
-* [`todo trash-archive`](#todo-trash-archive)
-* [`todo url SHORTCODE URL`](#todo-url-shortcode-url)
-* [`todo view SHORTCODE`](#todo-view-shortcode)
+
+- [`todo action SHORTCODE`](#todo-action-shortcode)
+- [`todo active`](#todo-active)
+- [`todo add`](#todo-add)
+- [`todo category SHORTCODE CATEGORY`](#todo-category-shortcode-category)
+- [`todo complete [SHORTCODE]`](#todo-complete-shortcode)
+- [`todo due SHORTCODE`](#todo-due-shortcode)
+- [`todo empty`](#todo-empty)
+- [`todo help [COMMAND]`](#todo-help-command)
+- [`todo intention SHORTCODE`](#todo-intention-shortcode)
+- [`todo list [CATEGORY]`](#todo-list-category)
+- [`todo note SHORTCODE`](#todo-note-shortcode)
+- [`todo start`](#todo-start)
+- [`todo title SHORTCODE`](#todo-title-shortcode)
+- [`todo trash [CATEGORY]`](#todo-trash-category)
+- [`todo trash-archive`](#todo-trash-archive)
+- [`todo url SHORTCODE URL`](#todo-url-shortcode-url)
+- [`todo view SHORTCODE`](#todo-view-shortcode)
 
 ## `todo action SHORTCODE`
 
@@ -295,4 +309,5 @@ ARGUMENTS
 ```
 
 _See code: [src/commands/view.ts](https://github.com/ErikAugust/todo/blob/v1.4.0/src/commands/view.ts)_
+
 <!-- commandsstop -->
