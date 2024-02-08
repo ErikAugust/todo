@@ -15,7 +15,7 @@ export default class Start extends Command {
     // Prompt user for a new file path:
     const { newFile } = await createNewFilePrompt();
 
-    if (checkIfFileExists(newFile)) {
+    if (await checkIfFileExists(newFile)) {
       this.log(`Lists already exist at ${newFile}! Stopping.`);
       process.exit(0);
     } else {
